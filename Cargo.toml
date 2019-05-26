@@ -1,0 +1,10 @@
+[package]
+name = "jfx"
+version = "0.1.0"
+authors = ["treetertot <europajuice@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+ggez = "*"
+shapekit = {git = "https://github.com/treetertot/shapekit"}
+lame = {git = "https://github.com/treetertot/lame"}
