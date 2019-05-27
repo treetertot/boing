@@ -22,8 +22,8 @@ impl Rect {
         graphics::Rect{x: zero.x, y: zero.y, w: offsets.x, h: offsets.y}
     }
     pub fn new_square(x: f32, y: f32) -> Rect {
-        let start = Shape::new(vec![Vector::new(0.0, 0.0), Vector::new(50.0, 0.0), Vector::new(50.0, 50.0), Vector::new(0.0, 50.0)], Vector::new(x, y));
-        Rect{hitbox: start, velocity: Vector::new(250.0, 250.0), visible: true}
+        let start = Shape::new(vec![Vector::new(0.0, 0.0), Vector::new(10.0, 0.0), Vector::new(10.0, 10.0), Vector::new(0.0, 10.0)], Vector::new(x, y));
+        Rect{hitbox: start, velocity: Vector::new(125.0, 125.0), visible: true}
     }
 }
 
@@ -38,6 +38,7 @@ impl Entity for Rect {
                 }
                 let entity = ent.read().unwrap();
                 if let Some(res) = clone.hitbox.resolve(&entity.hitbox) {
+                    clone.hitbox.move_by(res);
                     if res.x < 0.0 {
                         clone.velocity.x = clone.velocity.x.abs() * -1.0;
                     } else if res.x > 0.0 {

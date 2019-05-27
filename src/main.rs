@@ -45,46 +45,14 @@ pub fn main() {
 
 fn init() -> World<square::Rect> {
     let world = World::new();
-    world.push(square::Rect::new(0.0, -100.0, 800.0, 100.0, Vector::new(0.0, 0.0), false));
+    world.push(square::Rect::new(-100.0, -100.0, 1000.0, 100.0, Vector::new(0.0, 0.0), false));
     world.push(square::Rect::new(-100.0, 0.0, 100.0, 600.0, Vector::new(0.0, 0.0), false));
-    world.push(square::Rect::new(0.0, 600.0, 800.0, 100.0, Vector::new(0.0, 0.0), false));
+    world.push(square::Rect::new(-100.0, 600.0, 1000.0, 100.0, Vector::new(0.0, 0.0), false));
     world.push(square::Rect::new(800.0, 0.0, 100.0, 600.0, Vector::new(0.0, 0.0), false));
-    world.push(square::Rect::new_square(400.0, 250.0));
-    world.push(square::Rect::new_square(400.0, 200.0));
-    world.push(square::Rect::new_square(300.0, 250.0));
-    world.push(square::Rect::new_square(300.0, 200.0));
-    world.push(square::Rect::new_square(400.0, 250.0));
-    world.push(square::Rect::new_square(400.0, 200.0));
-    world.push(square::Rect::new_square(300.0, 250.0));
-    world.push(square::Rect::new_square(300.0, 200.0));
-    world.push(square::Rect::new_square(400.0, 250.0));
-    world.push(square::Rect::new_square(400.0, 200.0));
-    world.push(square::Rect::new_square(300.0, 250.0));
-    world.push(square::Rect::new_square(300.0, 200.0));
-    world.push(square::Rect::new_square(400.0, 250.0));
-    world.push(square::Rect::new_square(400.0, 200.0));
-    world.push(square::Rect::new_square(300.0, 250.0));
-    world.push(square::Rect::new_square(300.0, 200.0));
-    world.push(square::Rect::new_square(400.0, 250.0));
-    world.push(square::Rect::new_square(400.0, 200.0));
-    world.push(square::Rect::new_square(300.0, 250.0));
-    world.push(square::Rect::new_square(300.0, 200.0));
-    world.push(square::Rect::new_square(400.0, 250.0));
-    world.push(square::Rect::new_square(400.0, 200.0));
-    world.push(square::Rect::new_square(300.0, 250.0));
-    world.push(square::Rect::new_square(300.0, 200.0));
-    world.push(square::Rect::new_square(400.0, 250.0));
-    world.push(square::Rect::new_square(400.0, 200.0));
-    world.push(square::Rect::new_square(300.0, 250.0));
-    world.push(square::Rect::new_square(300.0, 200.0));
-    world.push(square::Rect::new_square(400.0, 250.0));
-    world.push(square::Rect::new_square(400.0, 200.0));
-    world.push(square::Rect::new_square(300.0, 250.0));
-    world.push(square::Rect::new_square(300.0, 200.0));
-    world.push(square::Rect::new_square(400.0, 250.0));
-    world.push(square::Rect::new_square(400.0, 200.0));
-    world.push(square::Rect::new_square(300.0, 250.0));
-    world.push(square::Rect::new_square(300.0, 200.0));
+    for _i in 0..400 {
+        world.push(square::Rect::new_square(400.0, 250.0));
+        world.push(square::Rect::new_square(400.0, 200.0));
+    }
     world.start();
     world
 }
